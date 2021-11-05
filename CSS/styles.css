@@ -1,0 +1,320 @@
+:root {
+    --clr-text: #ebebeb;
+    --clr-background: #0B0A0A;
+    --clr-primary: #53917E;
+    --clr-accent: #F9A620;
+
+    --ff-title: 'Source Code Pro', monospace;
+    --ff-serif: monospace, sans-serif;    
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: var(--ff-title); 
+    color: var(--clr-background);
+    font-size: 1.125rem;
+}
+
+body {
+    margin: 0;
+}
+
+section {
+    padding: 3em 1em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Typography */
+
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+h2, h3 {
+    font-family: var(--ff-title);
+    line-height: 0.8; 
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+p {
+    margin-bottom: .85em;
+}
+
+strong {
+    text-transform: uppercase;
+}
+
+.text-primary {
+    color: var(--clr-primary);
+}
+
+.section-title.text-primary {
+    text-align: center;
+    
+    
+}
+
+.section-title {
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.section-title-small {
+   font-size: 3rem; 
+}
+
+.logo {
+    font-family: var(--ff-title);
+    text-align: center;
+}
+
+.logo a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Navigation */
+
+header {
+    padding: 1em 0 2em;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+}
+
+nav a {
+    display: inline-block;
+    padding: .5em;
+    color: var(--clr-primary);
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--clr-accent);
+    text-decoration: underline;
+}
+
+ 
+
+
+/* Homepage Styles */
+
+ .intro {
+     background-color: rgb(80, 80, 80);
+     background-image: url(../images/Sprinter.jpg);
+     background-blend-mode: multiply;
+     background-attachment: fixed;
+     background-size: cover;
+     color: white;
+     text-align: center;
+     padding: 15vh 1em;
+ }
+
+ .pro-con {
+     background-color: var(--clr-accent);
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+     padding: 3em 1em 1em;
+
+ }
+
+ .pro-con__body {
+     padding: 1em 1em 3em;
+     text-align: center;
+ }
+
+ .vans {
+     display: flex;
+     flex-direction: column; 
+     max-width: 30rem;
+     margin: 0 auto;
+     overflow: hidden;
+     box-shadow: 0 0 1em rgba(0, 0, 0, 0.76);
+ }
+
+ .van {
+     background: var(--clr-primary);
+     padding: 1em;
+     border-radius: .35rem;   
+ }
+
+ .section-title-van {
+    text-align: center;
+    margin-bottom: 1em;
+ }
+
+ .van__content {
+     padding: 1em;
+ }
+
+ .van__title {
+     color: var(--clr-text);
+     font-size: 2rem;
+     margin-bottom: 0.75rem;
+ }
+
+ /* Footer */
+
+ footer {
+     background: var(--clr-accent);
+     padding: 3em 1em;
+     color: var(--clr-text);
+     display: flex;
+     justify-content: center;
+     margin-top: 3em;
+ }
+
+ footer a {
+     color: inherit;
+ }
+
+ .footer-nav {
+     list-style: none;
+     
+
+ }
+
+ .footer-nav a {
+     padding: 0.75em;
+     text-decoration: none;
+
+ }
+
+ .footer-nav a:hover {
+     text-decoration: underline;
+     color: #000;
+ }
+
+ .footer-social {
+     list-style: none;
+ }
+
+ .social__icon {
+     max-width: 50px;
+ }
+
+ /* Breakpoints */
+
+ @media only screen and (min-width: 750px) {
+
+
+    header  {
+        display: flex;
+        padding: 1em 0 1em;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-evenly;
+        padding-right: 5em;
+    }
+
+    .logo {
+        text-align: left;
+        margin-left: 6em;
+    }
+     section {
+         padding: 6em 1em;
+     }
+
+     .pro-con {
+         flex-direction: row;
+         
+     }
+
+     .pro-con-title,
+     .pro-con__body {
+         flex: 0 1 50%;
+         justify-content: center;
+         
+     }
+
+     .pro-con-title {
+         max-width: 27rem;
+         margin-left: auto;
+     }
+
+     .pro-con__body {
+         max-width: 27rem;
+         margin-right: auto;
+     }
+
+     .about-vanlife header {
+         padding: 0;
+         display: flex;
+         justify-content: space-around;
+
+     }
+
+     .about-vanlife {
+         text-align: center;
+         margin-right: auto;
+         margin-left: auto;
+         max-width: 1000px;
+     }
+
+     .about-p {
+         padding: 0;
+         display: flex;
+         justify-content: space-around;
+
+     }
+
+     .section-title-van {
+         text-align: center;
+         margin-bottom: 1em;
+         
+         
+     }
+
+
+
+     .footer-nav {
+          display: inline-flex;
+      }
+
+      .footer-social {
+        display: inline-flex;
+    }
+
+      
+
+      
+
+    
+
+ @media only screen and (min-width: 1100px) {
+
+    .vans {
+        display: inline-flex;
+        flex-direction: row;
+        max-width: 100%;
+        
+    }
+
+    .van {
+        margin: 1em;
+    } 
+}
